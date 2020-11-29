@@ -1,0 +1,44 @@
+<!--Earth's Gravity: 9.8 m/s2-->
+<!--Mars' Gravity: 3.7 m/s2-->
+<!--Jupiter's Gravity: 24.8 m/s2-->
+<!--Our weight as a variable-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your weight on...</title>
+    </head>
+
+    <body>
+        <h1>Your weight on other planet</h1>
+        <p>Your weight is less in Mars!</p>
+
+        <script>
+            // We are going to code, as a variables, all the different gravities wrotten before and our weight
+            var user = prompt("What is your weight?");
+            var planet = parseInt(prompt("Choose your planet. 1 is Mars 2 is Jupiter"));
+            var weight = parseInt(user);
+            var g_earth = 9.8;
+            var g_mars = 3.7;
+            var g_jupiter = 24.8;
+            var final_weight;
+            var nombre;
+            if(planet == 1)
+            {
+                final_weight = weight * g_mars / g_earth;
+                nombre = "Mars"
+            }
+            else if (planet == 2)
+            {
+                final_weight = weight * g_jupiter / g_earth;
+                nombre = "Jupiter"
+            }
+            else{
+                final_weight = 1000;
+                nombre = "Krypton";
+            }
+            final_weight = parseInt(final_weight);
+            document.write("Your weight in " + nombre + " is " + final_weight + " Kilos");
+        </script>
+    </body>
+</html>
